@@ -1,0 +1,29 @@
+<script>
+
+const gifURL = 'https://static.wixstatic.com/media/5922a2_2b1dfa61c08d47c1817c55b53a6dccf8~mv2.gif'
+const gifWidth = 50
+const gifHeight = 50
+const gifOffsetX = 1000
+  
+  function createGif (x, y) {
+    const gif = document.createElement('img')
+		gif.src = gifURL
+    document.body.appendChild(gif)
+    gif.style.width = gifWidth + 'px'
+    gif.style.height = gifHeight + 'px'
+    gif.style.position = 'absolute'
+    gif.style.left = x + 'px'
+    gif.style.top = y + 'px'
+  }
+  
+	function init () {
+    for (let c = 0; c < 1000; c++) {
+			const x = c * gifWidth - gifOffsetX
+      const y = 0
+      createGif(x,y)
+    }
+  }
+  
+window.addEventListener('load', init)
+  
+</script>
