@@ -1,7 +1,7 @@
 <script>
 
 const gifURL = 'https://upload.wikimedia.org/wikipedia/commons/a/ae/Yin_yang.gif'
-const gifWidth = 100
+const gifWidth = 150
 const gifHeight = 100
 const overlapX = 0.3
 const overlapY = 0.8
@@ -27,8 +27,8 @@ const screenHalfY = window.innerHeight / 2
   }
   
   function createCircleGifs (r) {
-     for (let i = 0; i < 20; i++) {
-			const t = i * 0.312
+     for (let i = 0; i < 10; i++) {
+			const t = i * 0.900
       //const r = 200
       const y = Math.sin(t) * r + screenHalfY - 50
       const x = Math.cos(t) * r + screenHalfX - 50
@@ -39,7 +39,7 @@ const screenHalfY = window.innerHeight / 2
 	function init () {
     document.body.style.overflow = 'hidden'
 
-    for (let i = 10; i < 18; i++) {
+    for (let i = 10; i < 35; i++) {
 			createCircleGifs(i * 10)
     }
 
